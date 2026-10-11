@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Library Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <div class="header-content">
+                <div class="logo">📚</div>
+                <div>
+                    <h1>University Library Assistant</h1>
+                    <p>Ask me about hours, books, borrowing, and more.</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="chat-body" id="chatBody">
+            <div class="message bot-message">
+                <div class="avatar">🤖</div>
+                <div class="bubble">
+                    Hello! I'm your library assistant. How can I help you today?
+                </div>
+            </div>
+        </main>
+
+        <footer class="chat-footer">
+            <input
+                type="text"
+                id="userInput"
+                placeholder="Type your question here..."
+                autocomplete="off"
+            />
+            <button id="sendBtn">Send</button>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
